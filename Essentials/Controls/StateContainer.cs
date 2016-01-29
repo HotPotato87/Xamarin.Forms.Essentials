@@ -1,14 +1,19 @@
 using System.Collections.Generic;
-using Xamarin.Forms;
 
-namespace Controls
+namespace Xamarin.Forms.Essentials.Controls
 {
     [ContentProperty("Conditions")]
+    [Preserve(AllMembers = true)]
     public class StateContainer : ContentView
     {
         public List<StateCondition> Conditions { get; set; } = new List<StateCondition>();
 
         public static readonly BindableProperty StateProperty = BindableProperty.Create<StateContainer, object>(x => x.State, null, propertyChanged: StateChanged);
+
+        public static void Init()
+        {
+            //for linker
+        }
 
         private static void StateChanged(BindableObject bindable, object oldValue, object newValue)
         {
@@ -26,9 +31,19 @@ namespace Controls
         {
             foreach (StateCondition stateCondition in Conditions)
             {
-                if (stateCondition.State.ToString().Equals(newValue.ToString()))
+                if (stateCondition.Is != null)
                 {
-                    this.Content = stateCondition.Content;
+                    if (stateCondition.Is.ToString().Equals(newValue.ToString()))
+                    {
+                        this.Content = stateCondition.Content;
+                    }
+                }
+                else if (stateCondition.IsNot != null)
+                {
+                    if (!stateCondition.IsNot.ToString().Equals(newValue.ToString()))
+                    {
+                        this.Content = stateCondition.Content;
+                    }
                 }
             }
         }
