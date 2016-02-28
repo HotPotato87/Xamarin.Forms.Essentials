@@ -16,6 +16,12 @@
       <TableSection Title="Circle">
         <TextCell Text="Example 1" Command="{Binding CircleSamplesCommand}" />
       </TableSection>
+      <TableSection Title="GradientPanel">
+        <TextCell Text="[To be added]" />
+      </TableSection>
+      <TableSection Title="BlurryPanel (iOS only)">
+        <TextCell Text="[To be added]" />
+      </TableSection>
     </TableRoot>
   </TableView>
 </ContentPage>

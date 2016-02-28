@@ -42,9 +42,6 @@
     <Compile Include="Controls\GradientLayer.cs" />
     <Compile Include="Extentions\LayoutExtentions.cs" />
     <Compile Include="Helpers\PreserveAttribute.cs" />
-    <Compile Include="Controls\SidePanelControl.xaml.cs">
-      <DependentUpon>SidePanelControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\Spacer.cs" />
     <Compile Include="Controls\ToggleSideBarToolBarItem.cs" />
     <Compile Include="State\StateCondition.cs" />
@@ -52,14 +49,7 @@
     <Compile Include="State\StateContainer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="nuget\Xamarin.Forms.Essentials.Controls.1.0.0.nupkg" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Controls\SidePanelControl.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
