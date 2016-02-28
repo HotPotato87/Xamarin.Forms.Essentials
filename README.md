@@ -36,6 +36,8 @@ See [this blogpost](http://blog.xdelivered.com/binding-state-mvvm-xamarin-forms)
    </controls:StateCondition>
  </controls:StateContainer>
 ```
+
+![State container demo](http://blog.xdelivered.com/wp-content/uploads/2016/02/statecontainer-1-1.gif)
   
 ### GradientLayer [iOS only for now]
 Allows gradient backgrounds to be created.
