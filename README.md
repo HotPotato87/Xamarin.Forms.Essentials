@@ -2,7 +2,7 @@
 
 This repository houses a few components and functions to make your life in Xamarin.Forms that little bit easier. 
 
-##State Container [all platforms]
+### State Container [all platforms]
 StateContainer is a visual component which allows Mvvm bindings to Enums. This allows really clean viewmodels to be written, and encourages better readability in the Viewmodel and the View.
 See [this blogpost](http://blog.xdelivered.com/binding-state-mvvm-xamarin-forms) for more details.
 
@@ -35,14 +35,15 @@ See [this blogpost](http://blog.xdelivered.com/binding-state-mvvm-xamarin-forms)
    </controls:StateCondition>
  </controls:StateContainer>
   ```
-  ##GradientLayer [iOS only for now]
+  
+  ### GradientLayer [iOS only for now]
   Allows gradient backgrounds to be created.
   Samples, droid + win implementation coming soon
   
-  ##BlurryPanel [iOS only for now]
+  ### BlurryPanel [iOS only for now]
   Allows a blurry panel to be used. This is really on an iOS UI pattern, so can only be used there.
   
-  ##Circle [All platforms]
+  ### Circle [All platforms]
   Allows circles to be used in Forms. Set stokethickness, color & fillcolor.
   Sample coming soon
   
