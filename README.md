@@ -34,17 +34,17 @@ See [this blogpost](http://blog.xdelivered.com/binding-state-mvvm-xamarin-forms)
      <Label Text="Sorry there was a problem logging in" TextColor="Red"></Label>
    </controls:StateCondition>
  </controls:StateContainer>
-  ```
+```
   
-  ### GradientLayer [iOS only for now]
-  Allows gradient backgrounds to be created.
-  Samples, droid + win implementation coming soon
+### GradientLayer [iOS only for now]
+Allows gradient backgrounds to be created.
+Samples, droid + win implementation coming soon
   
-  ### BlurryPanel [iOS only for now]
-  Allows a blurry panel to be used. This is really on an iOS UI pattern, so can only be used there.
+### BlurryPanel [iOS only for now]
+Allows a blurry panel to be used. This is really on an iOS UI pattern, so can only be used there.
   
-  ### Circle [All platforms]
-  Allows circles to be used in Forms. Set stokethickness, color & fillcolor.
-  Sample coming soon
+### Circle [All platforms]
+Allows circles to be used in Forms. Set stokethickness, color & fillcolor.
+Sample coming soon
   
   
