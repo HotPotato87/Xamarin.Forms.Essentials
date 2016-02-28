@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:example2="clr-namespace:Essentials.Samples.Samples.StateCondition.Example2;assembly=Essentials.Samples"
+             xmlns:controls="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
+             x:Class="Essentials.Samples.Samples.StateCondition.Example2.FindUsernameView">
+  <ContentPage.BindingContext>
+    <example2:FindUsernameViewmodel />
+  </ContentPage.BindingContext>
+  <Grid Padding="50">
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="200" WidthRequest="300">
+
+      <Entry Placeholder="Username" Text="{Binding UserName, Mode=TwoWay}"></Entry>
+
+      <controls:StateContainer State="{Binding State}">
+        <controls:StateCondition Is="Idle">
+          <!-- None -->
+        </controls:StateCondition>
+        <controls:StateCondition Is="Searching">
+          <Label Text="Searching.." TextColor="Black"></Label>
+        </controls:StateCondition>
+        <controls:StateCondition Is="Valid">
+          <Label Text="Username is available!" TextColor="Green"></Label>
+        </controls:StateCondition>
+        <controls:StateCondition Is="Taken">
+          <Label Text="Username is taken :(" TextColor="Red"></Label>
+        </controls:StateCondition>
+      </controls:StateContainer>
+
+      <Button Text="Continue" Command="{Binding ContinueCommand}" />
+      
+    </StackLayout>
+  </Grid>
+</ContentPage>

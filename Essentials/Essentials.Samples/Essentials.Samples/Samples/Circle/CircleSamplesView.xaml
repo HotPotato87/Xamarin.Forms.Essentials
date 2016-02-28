@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Xamarin.Forms.Essentials.Controls.Controls;assembly=Xamarin.Forms.Essentials.Controls"
+             x:Class="Essentials.Samples.Samples.Circle.CircleSamplesView">
+  <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+    <controls:Circle FillColor="Green" HorizontalOptions="Center" VerticalOptions="Center" StrokeColor="Gray" StrokeThickness="5" HeightRequest="100" WidthRequest="100" />
+    <controls:Circle FillColor="Blue" HorizontalOptions="Center" VerticalOptions="Center" StrokeColor="Gray" StrokeThickness="15" HeightRequest="100" WidthRequest="100" />
+    <controls:Circle FillColor="Lime" HorizontalOptions="Center" VerticalOptions="Center" StrokeColor="Gray" StrokeThickness="2" HeightRequest="100" WidthRequest="100" />
+    <controls:Circle FillColor="Maroon" HorizontalOptions="Center" VerticalOptions="Center" StrokeColor="Gray" StrokeThickness="25" HeightRequest="100" WidthRequest="100" />
+    <controls:Circle FillColor="Blue" HorizontalOptions="Center" VerticalOptions="Center" StrokeColor="Gray" StrokeThickness="2" HeightRequest="100" WidthRequest="100" />
+
+  </StackLayout>
+</ContentPage>

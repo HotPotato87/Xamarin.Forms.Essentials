@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Essentials.Samples.Viewmodels.StateContainerSample.LoginViewmodel">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Essentials.Samples.Viewmodels.StateContainerSample.LoginViewmodel.State">
+        <TypeIdentifier>
+          <NewMemberFileName>Viewmodels\StateContainerSample\LoginViewmodel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAACAAAA=</HashCode>
+      <FileName>Viewmodels\StateContainerSample\LoginViewmodel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

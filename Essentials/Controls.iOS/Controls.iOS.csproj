@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderers\BlurryPanelRenderer.cs" />
+    <Compile Include="Renderers\CircleRenderer.cs" />
     <Compile Include="Renderers\GradientLayerRenderer.cs" />
   </ItemGroup>
   <ItemGroup>

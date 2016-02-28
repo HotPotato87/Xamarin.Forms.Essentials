@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:stateContainerSample="clr-namespace:Essentials.Samples.Viewmodels.StateContainerSample;assembly=Essentials.Samples"
+             xmlns:controls="clr-namespace:Xamarin.Forms.Essentials.Controls;assembly=Xamarin.Forms.Essentials.Controls"
+             x:Class="Essentials.Samples.Views.LoginView">
+  <ContentPage.BindingContext>
+    <stateContainerSample:LoginViewmodel />
+  </ContentPage.BindingContext>
+
+  <StackLayout Orientation="Vertical" WidthRequest="650" HeightRequest="350" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+    <!-- Current State -->
+    <Label Text="{Binding LoggedInState, StringFormat='State = {0}'}" FontAttributes="Bold">
+      <Label.Triggers>
+        <DataTrigger TargetType="Label" Binding="{Binding LoggedInState}" Value="Idle">
+          <Setter Property="TextColor" Value="Black" />
+        </DataTrigger>
+       <DataTrigger TargetType="Label" Binding="{Binding LoggedInState}" Value="LoggingIn">
+          <Setter Property="TextColor" Value="Purple" />
+        </DataTrigger>
+     <DataTrigger TargetType="Label" Binding="{Binding LoggedInState}" Value="LoggedIn">
+          <Setter Property="TextColor" Value="Green" />
+        </DataTrigger>
+      </Label.Triggers>
+    </Label>
+
+    <!-- Login Container -->
+    <Grid Padding="1" BackgroundColor="Gray" HeightRequest="350">
+      <!-- Padded Grid -->
+      <Grid Padding="15" BackgroundColor="White">
+        <!-- Login State -->
+        <controls:StateContainer State="{Binding LoggedInState}" BackgroundColor="White">
+          <controls:StateCondition Is="Idle">
+            <!-- Logging in entry -->
+            <StackLayout Orientation="Vertical" WidthRequest="250" HeightRequest="150" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+              <StackLayout Orientation="Vertical">
+                <Entry Placeholder="Username" Text="{Binding UserName}" />
+                <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}" />
+              </StackLayout>
+              <Button Text="Login" Command="{Binding LoginCommand}" />
+            </StackLayout>
+          </controls:StateCondition>
+          <controls:StateCondition Is="LoggingIn">
+            <!-- Logging in -->
+            <ActivityIndicator IsRunning="True" />
+          </controls:StateCondition>
+          <controls:StateCondition Is="LoggedIn">
+            <!-- Logged in successfully -->
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+              <Image Source="https://cdn3.iconfinder.com/data/icons/10con/512/checkmark_tick-128.png" WidthRequest="35" HeightRequest="35" />
+              <Label Text="Logged In" />
+            </StackLayout>
+          </controls:StateCondition>
+          <controls:StateCondition Is="Problem">
+            <!-- Login Problem -->
+            <Label Text="Sorry there was a problem logging in" TextColor="Red"></Label>
+          </controls:StateCondition>
+        </controls:StateContainer>
+      </Grid>
+    </Grid>
+
+  </StackLayout>
+
+
+
+
+</ContentPage>

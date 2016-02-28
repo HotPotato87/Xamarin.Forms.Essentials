@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Essentials.Samples.Viewmodels;assembly=Essentials.Samples"
+             x:Name="thisControl"
+             x:Class="Essentials.Samples.Views.SamplesGalleryView">
+  <ContentPage.BindingContext>
+    <viewmodels:SamplesGalleryViewmodel />
+  </ContentPage.BindingContext>
+  <TableView Intent="Settings">
+    <TableRoot>
+      <TableSection Title="State Container">
+        <TextCell Text="Example 1" Command="{Binding StateContainerCommand}" />
+        <TextCell Text="Example 2" Command="{Binding StateContainer2Command}" />
+      </TableSection>
+      <TableSection Title="Circle">
+        <TextCell Text="Example 1" Command="{Binding CircleSamplesCommand}" />
+      </TableSection>
+    </TableRoot>
+  </TableView>
+</ContentPage>
