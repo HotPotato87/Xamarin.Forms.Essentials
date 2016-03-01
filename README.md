@@ -2,7 +2,7 @@
 
 This repository houses a few components and functions to make your life in Xamarin.Forms that little bit easier. 
 
->[Get from nuget](nuget.org/packages/Xamarin.Forms.Essentials.Controls/)
+>[Get from nuget](http://nuget.org/packages/Xamarin.Forms.Essentials.Controls/)
 
 ### State Container [all platforms]
 StateContainer is a visual component which allows Mvvm bindings to Enums. This allows really clean viewmodels to be written, and encourages better readability in the Viewmodel and the View.
