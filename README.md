@@ -9,7 +9,7 @@ StateContainer is a visual component which allows Mvvm bindings to Enums. This a
 
 >[See this blogpost](http://blog.xdelivered.com/binding-state-mvvm-xamarin-forms) for more details.
 
-```C#
+```xml
  <controls:StateContainer State="{Binding LoggedInState}" BackgroundColor="White">
    <controls:StateCondition Is="Idle">
      <!-- Logging in entry -->
